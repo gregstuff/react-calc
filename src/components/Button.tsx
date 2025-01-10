@@ -9,6 +9,8 @@ import {
     faO, faE, faC, faDivide,
     faDeleteLeft, IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
+import { usePub } from "../hooks/UseHooks";
+import {CALCULATOR_BUTTON_EVENT} from "../lib/Constants";
 
 
 type Props = {
@@ -144,10 +146,13 @@ function Button( { type } : Props){
             break;
     }
 
+    const publish = usePub();
 
-    return( 
+
+    return ( 
     <>
-        <button className= { `calc-button ${buttonData.className}` } >
+        <button title = { ButtonType[type] } type = 'button' 
+            className = { `calc-button ${buttonData.className}` } onClick={ () => publish(CALCULATOR_BUTTON_EVENT, type)}>
             {
                 buttonData.icon.map(i => <FontAwesomeIcon icon={i} />)
             }

@@ -48,14 +48,14 @@
 .calc-button {
   flex: 0 0 25%;
   outline: 1px solid rgb(200,200,200);
-  height: 2em;
+  height: 3em;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 .calc-body {
-  width : 12em;
+  width : 16em;
   margin-top:2em;
   margin-left : auto;
   margin-right : auto;

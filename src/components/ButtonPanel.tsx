@@ -6,6 +6,12 @@ function ButtonPanel(){
     <>
         <div className="calc-button-panel">
             <div className="calc-button-panel-row">
+                <Button type={ButtonType.CLEAR_ENTRY} />
+                <Button type={ButtonType.CLEAR} />
+                <Button type={ButtonType.DELETE_LEFT} />
+                <Button type={ButtonType.DIVIDE} />
+            </div>
+            <div className="calc-button-panel-row">
                 <Button type={ButtonType.ONE} />
                 <Button type={ButtonType.TWO} />
                 <Button type={ButtonType.THREE} />

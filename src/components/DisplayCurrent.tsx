@@ -1,8 +1,15 @@
-function DisplayCurrent() {
+import { useState } from "react";
+
+type Props = {
+    display : string;
+};
+
+function DisplayCurrent( { display } : Props) {
+
     return (
-    <div className="calc-display-current">
-        <p className="calc-display-current-text">0</p>
-    </div>
+        <div className="calc-display-current">
+            <p className="calc-display-current-text"> { display } </p>
+        </div>
     );
 }
 
