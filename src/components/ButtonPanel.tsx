@@ -1,4 +1,4 @@
-import ButtonType from "../lib/ButtonType";
+import { ButtonType } from "../lib/ButtonType";
 import Button from "./Button";
 
 function ButtonPanel(){

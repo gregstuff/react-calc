@@ -1,14 +1,26 @@
-import { useState } from "react";
+import { useAppSelector } from "../lib/Hooks";
+import { CalculatorState, selectState } from "./CalculatorSlice"
 
 type Props = {
-    display : string;
-};
+    state : CalculatorState[]
+}
 
-function DisplayCurrent( { display } : Props) {
+function DisplayCurrent( { state } : Props ) {
+
+    let numberValue : string = '';
+
+    for(var i = 0; i < state.length; ++i) {
+        if(!state[i].isOperation){
+            numberValue = state[i].value;
+            break;
+        }
+    }
 
     return (
         <div className="calc-display-current">
-            <p className="calc-display-current-text"> { display } </p>
+            <p className="calc-display-current-text"> 
+                { numberValue ? numberValue : '0' }
+            </p>
         </div>
     );
 }
